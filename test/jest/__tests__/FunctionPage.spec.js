@@ -45,3 +45,12 @@ test('trigger click event on button ', async () => {
   await button.trigger('click')
   expect(wrapper.vm.addition(1,2)).toBe(3)
 })
+
+test('trigger click event on button name and code', async () => {
+  const wrapper = shallowMount(FunctionPage);
+  const button = wrapper.find('button');
+  await button.trigger('click');
+  expect(wrapper.vm.addname('Thitipong', 'Ruensupa', '6404101311')).toBe(
+    'Thitipong Ruensupa 6404101311'
+  );
+});

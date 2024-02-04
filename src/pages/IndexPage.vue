@@ -20,6 +20,9 @@ export default {
   data() {
     return {
       title: 'Vue is awesome.',
+      firstName: '',
+      secondName: '',
+      IDstudent: '',
       firstValue:0,
       secondValue:0,
       answerVulue:0
@@ -28,6 +31,9 @@ export default {
   methods: {
     // https://jestjs.io/docs/using-matchers
     // https://www.philbarresi.com/jest-test-guide/
+    submitForm() {
+      this.$emit('submit form')
+    },
     addition(first, second) {
       this.answerVulue =  Number(first) + Number(second)
       return this.answerVulue;
